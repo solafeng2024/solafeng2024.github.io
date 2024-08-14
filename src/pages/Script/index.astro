@@ -83,7 +83,7 @@ const posts = (await getCollection('Script')).sort(
           {
             posts.map(post => (
               <li>
-                <a href={`/blog/${post.slug}/`}>
+                <a href={`/Script/${post.slug}/`}>
                   <h4 class="title">{post.data.title}</h4>
                   <p class="date">
                     <FormattedDateR date={post.data.pubDate} />

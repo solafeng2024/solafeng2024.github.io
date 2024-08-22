@@ -15,76 +15,20 @@ const posts = (await getCollection('Script')).sort(
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      main {
-        width: 960px;
-      }
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        /* gap: 2rem; */
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      ul li {
-        width: 100%;
-        text-align: center;
-      }
-      ul li * {
-        text-decoration: none;
-        transition: 0.2s ease;
-      }
-      ul li img {
-        margin-bottom: 0.5rem;
-        border-radius: 12px;
-      }
-      ul li a {
-        display: block;
-      }
-      .title {
-        margin: 0;
-        color: rgb(var(--black));
-        line-height: 1;
-      }
-      .date {
-        margin: 0;
-        color: rgb(var(--gray));
-      }
-      ul li a:hover h4,
-      ul li a:hover .date {
-        color: rgb(var(--accent));
-      }
-      ul a:hover img {
-        box-shadow: var(--box-shadow);
-      }
-      @media (max-width: 720px) {
-        ul {
-          gap: 0.5em;
-        }
-        ul li {
-          width: 100%;
-          text-align: center;
-        }
-        ul li:first-child {
-          margin-bottom: 0;
-        }
-        ul li:first-child .title {
-          font-size: 1.563em;
-        }
-      }
-    </style>
   </head>
-  <body>
+
+  <body
+    class="p-5 max-w-screen-md mx-auto tracking-wider gb-zinc-900 text-center"
+  >
     <Header />
     <main>
       <section>
-        <ul>
+        <ul class="mt-8">
           {
             posts.map(post => (
-              <li>
+              <li class="mb-2">
                 <a href={`/Script/${post.slug}/`}>
-                  <h4 class="title">{post.data.title}</h4>
+                  <h2 class="font-bold">{post.data.title}</h2>
                   <p class="date">
                     <FormattedDateR date={post.data.pubDate} />
                   </p>

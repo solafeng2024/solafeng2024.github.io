@@ -1,0 +1,28 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+---
+
+<!doctype html>
+<html lang="en" class="p-5 max-w-screen-md mx-auto tracking-wider gb-zinc-900">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>🧑‍🚀 yeee, Welcome !</h1>
+      <p>Welcome to my memory palace !</p>
+      <p>
+        While I was learning the front-end, I also tried to build my own bolg,
+        which was quite fun.
+      </p>
+      <p>I hope I can have fun and learn something.</p>
+      <p>If you see it, I hope you can also learn something.</p>
+      <p>Good lucky !</p>
+    </main>
+    <Footer />
+  </body>
+</html>
